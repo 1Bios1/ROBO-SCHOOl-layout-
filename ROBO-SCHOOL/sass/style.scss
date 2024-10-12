@@ -73,7 +73,7 @@
   color: white;
 
 
-  &__container {
+  .container {
     width: 100%;
     height: 100%;
   }
@@ -200,5 +200,94 @@
 
   }
 
+  .content {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../assets/Woman.svg') 95% center / 80dvh auto no-repeat;
+
+    @media (width <= 1500px) {
+      background: url('../assets/Woman.svg') 95% center / 70dvh auto no-repeat;
+    }
+
+    @media (width <= 1000px) {
+      background: none;
+    }
+
+    &__box {
+      display: flex;
+      flex-flow: column wrap;
+      gap: 5vmax;
+    
+      transform: translateX(-10%);
+
+      @media (width <= 1400px) {
+        transform: translateX(-12%);
+      }
+
+      @media (width <= 1000px) {
+        transform: translateX(0);
+        width: 100%;
+        height: 75%;
+        justify-content: space-between;
+        align-items: center;
+
+        background: url('../assets/Woman.svg') center bottom / 55dvh auto no-repeat;
+      }
+
+    }
+
+    &__paragraph {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 5vmax;
+
+      @media (width <= 1000px) {
+        transform: translateY(-30%);
+        gap: 3vmax;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    &__title {
+      font-size: 4vmax;
+      font-weight: 700;
+      font-family: Oswald;
+
+      @media (width <= 1000px) {
+        font-size: 5vmax;
+      }
+    }
+
+    &__text {
+      width: 75%;
+      text-wrap: balance;
+      font-weight: 300;
+      font-size: 2vmax;
+      font-family: Inter;
+
+      @media (width <= 1000px) {
+        font-size: 2vmax;
+      }
+    }
+
+    &__btn {
+      background-color: #D52027;
+      padding: 2vmax;
+      border-radius: 8px;
+      width: 35%;
+      font-size: 2vmax;
+
+      @media (width <= 1000px) {
+        width: 80%;
+      }
+    }
+
+  }
+
 
 }
+
