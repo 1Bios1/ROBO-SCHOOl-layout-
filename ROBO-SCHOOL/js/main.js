@@ -4,6 +4,7 @@ const dropdownBtn = document.getElementById('dropdown-btn')
 const dropdownMenu = document.getElementById('dropdown-menu')
 
 const schoolBtn = document.getElementById('school-btn')
+const schoolSec = document.getElementById('about-school')
 
 const couchers = document.getElementById('couchers-btn')
 const price = document.getElementById('price-btn')
@@ -16,6 +17,10 @@ dropdownBtn.addEventListener('click', function(elm) {
 schoolBtn.addEventListener('click', function(elm) {
     dropdownMenu.classList.remove('opened')
     dropdownBtn.classList.toggle("clicked")
+    schoolSec.scrollIntoView({
+        block: 'start',
+        behavior: "smooth",
+    })
 })
 
 couchers.addEventListener('click', function(elm) {

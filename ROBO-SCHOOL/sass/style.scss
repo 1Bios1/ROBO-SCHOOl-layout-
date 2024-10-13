@@ -8,9 +8,10 @@
   display: grid;
 
   grid-template-areas: 
-    'firstBlk firstBlk';
+    'firstBlk firstBlk'
+    'allpageblk allpageblk';
 
-  grid-template-rows: 100dvh;
+  grid-template-rows: 100dvh 2fr;
   background-color: #141024;
   min-height: 100dvh;
 }
@@ -24,7 +25,7 @@
   width: 100%;
   z-index: 9999999999;
   transform: translateY(-100dvh);
-  height: 100dvh;
+  min-height: 100dvh;
   background-color: #141024;
 
   @media (width > 800px) {
@@ -71,12 +72,6 @@
 .first-block {
   grid-area: firstBlk;
   color: white;
-
-
-  .container {
-    width: 100%;
-    height: 100%;
-  }
 
   .row {
 
@@ -289,5 +284,133 @@
   }
 
 
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.all-page-blk {
+  grid-area: allpageblk;
+
+  .about-us {
+    padding: 1vmax;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+
+    &__text {
+      width: 55%;
+      font-size: 1.25vmax;
+      font-family: Inter;
+
+      @media (width <= 1300px) {
+        font-size: 1.5vmax;
+      }
+
+      @media (width <= 1000px) {
+        font-size: 3.30vmax;
+        line-height: 4.25vmax;
+        margin: 5vmax 0;
+      }
+
+      @media (width <= 800px) {
+        width: 70%;
+        font-size: 2.8vmax;
+        line-height: 4vmax;
+      }
+    }
+
+    &__box {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      padding: 1.25vmax;
+      gap: 3vmax;
+      width: 65%;
+
+      @media (width <= 1300px) {
+        width: 75%;
+      }
+
+      @media (width <= 1000px) {
+        width: 100%;
+        align-items: flex-start;
+        
+      }
+    }
+
+    .cards {
+      display: flex;
+
+      @media (width <= 1000px) {
+        width: 100%;
+      }
+
+      &__container {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 1.5vmax;      
+        
+        @media (width <= 1000px) {
+          width: 100%;
+          flex-flow: column wrap;
+          align-items: center;
+          justify-content: center;
+          gap: 5vmax;
+        }
+      }
+    }
+
+    .card {
+      display: flex;
+      flex-flow: column wrap;
+      gap: 2vmax;
+
+      @media (width <= 1000px) {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &__title {
+        color: #D52027;
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 3vmax;
+
+        @media (width <= 1300px) {
+          font-size: 3.25vmax;
+        }
+
+        @media (width <= 1000px) {
+          font-size: 7vmax;
+        }
+      }
+
+      &__text {
+        text-wrap: balance;
+        line-height: 1.5vmax;
+        font-size: 0.8vmax;
+        font-family: Inter;
+        color: #141024B2;
+
+        @media (width <= 1300px) {
+          font-size: 1vmax;
+        }
+
+        @media (width <= 1000px) {
+          font-size: 2vmax;
+          width: 70%;
+          text-wrap: none;
+          line-height: 3.25vmax;
+        }
+      }
+    }
+  }
 }
 
