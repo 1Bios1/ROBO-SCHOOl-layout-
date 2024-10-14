@@ -9,6 +9,14 @@ const schoolSec = document.getElementById('about-school')
 const couchers = document.getElementById('couchers-btn')
 const price = document.getElementById('price-btn')
 
+const infoBtn = document.getElementById('info-btn')
+const information = document.getElementById('information')
+
+infoBtn.addEventListener('click', function(elm) {
+    information.classList.toggle('visible')
+})
+
+
 dropdownBtn.addEventListener('click', function(elm) {
     this.classList.toggle('clicked')
     dropdownMenu.classList.toggle('opened')
