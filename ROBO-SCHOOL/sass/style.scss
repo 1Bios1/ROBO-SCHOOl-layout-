@@ -299,12 +299,35 @@
   justify-content: center;
   align-items: center;
 
+  .title {
+    
+  }
+
   .box {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     padding: 1.25vmax;
     gap: 3vmax;
+  }
+
+  .title {
+
+    font-size: 2.5vmax;
+    font-family: Inter;
+    font-weight: 700;
+    text-wrap: balance;
+
+    @media (width <= 1000px) {
+      text-align: center;
+      width: 75%;
+      font-size: 4.5vmax;
+    }
+
+    @media (width <= 700px) {
+      width: 100%;
+      font-size: 3.7vmax;
+    }
   }
 
   .cards {
@@ -422,7 +445,7 @@
   }
 
   .after-course {
-    padding: 6vmax 1vmax;
+    padding: 10vmax 1vmax;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -554,25 +577,6 @@
   
     }
 
-    &__title {
-
-      font-size: 2.5vmax;
-      font-family: Inter;
-      font-weight: 700;
-      text-wrap: balance;
-
-      @media (width <= 1000px) {
-        text-align: center;
-        width: 75%;
-        font-size: 4.5vmax;
-      }
-
-      @media (width <= 700px) {
-        width: 100%;
-        font-size: 3.7vmax;
-      }
-    }
-
     &__box {
       width: 65%;
       height: 100%;
@@ -587,8 +591,10 @@
         align-items: center;
       }
     }
-
   }
+
+  .slider {}
+
 
 }
 

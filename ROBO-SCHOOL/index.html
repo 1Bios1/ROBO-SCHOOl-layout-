@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="js/wow.min.js"></script>
     <script>
@@ -72,6 +75,7 @@
       </header>
       <main class="all-page-blk">
         <div class="all-page-blk__container container">
+
           <section id="about-school" class="all-page-blk__about-us about-us">
             <div class="about-us__box box">
 
@@ -119,9 +123,10 @@
 
             </div>
           </section>
+
           <section class="all-page-blk__after-course after-course">
             <div class="after-course__box box">
-              <div class="after-course__title wow animate__animated animate__fadeInDown">Что вы получите после курса</div>
+              <div class="after-course__title title wow animate__animated animate__fadeInDown">Что вы получите после курса</div>
 
               <div class="after-course__cards cards wow animate__animated animate__bounceIn" data-wow-delay="0.2s">
                 <div class="cards__container">
@@ -166,10 +171,91 @@
               </div>
             </div>
           </section>
+
+          <section class="all-page-blk__slider slider">
+            <div class="slider__box box">
+              
+              <div class="slider__title title"> Профессиональные тренеры </div>
+
+              <div id="swiper" class="swiper">
+                <div id="swiperWrp" class="swiper-wrapper">
+
+                  <div class="slider__swiper-slide swiper-slide">
+
+                    <div class="swiper-slide__img">
+                      <img src="./assets/teacher-1.svg" alt="teacher-1">
+                    </div>
+
+                    <div class="swiper-slide__title">Ирина Лайм</div>
+                    <div class="swiper-slide__text">преподаватель по робототехнике</div>
+                    <button class="swiper-slide__button">Подробнее</button>
+
+                  </div>
+
+                  <div class="slider__swiper-slide swiper-slide">
+
+                    <div class="swiper-slide__img">
+                      <img src="./assets/teacher-2.svg" alt="teacher-2">
+                    </div>
+
+                    <div class="swiper-slide__title">Ирина Лайм</div>
+                    <div class="swiper-slide__text">преподаватель по робототехнике</div>
+                    <button class="swiper-slide__button">Подробнее</button>
+
+                  </div>
+
+                  <div class="slider__swiper-slide swiper-slide">
+
+                    <div class="swiper-slide__img">
+                      <img src="./assets/teacher-3.svg" alt="teacher-3">
+                    </div>
+
+                    <div class="swiper-slide__title">Максим Петров</div>
+                    <div class="swiper-slide__text">преподаватель по программированию</div>
+                    <button class="swiper-slide__button">Подробнее</button>
+
+                  </div>
+
+                  <div class="slider__swiper-slide swiper-slide">
+
+                    <div class="swiper-slide__img">
+                      <img src="./assets/teacher-4.svg" alt="teacher-4">
+                    </div>
+
+                    <div class="swiper-slide__title">Константин Назаров</div>
+                    <div class="swiper-slide__text">преподаватель по робототехнике</div>
+                    <button class="swiper-slide__button">Подробнее</button>
+
+                  </div>
+
+                  <div class="slider__swiper-slide swiper-slide">
+
+                    <div class="swiper-slide">
+                      <img src="./assets/teacher-5.svg" alt="teacher-5">
+                    </div>
+
+                    <div class="swiper-slide__title">Лиза Весенняя</div>
+                    <div class="swiper-slide__text">преподаватель по программированию</div>
+                    <button class="swiper-slide__button">Подробнее</button>
+
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="slider__btns btns">
+                <div class="btns__container">
+                  <div id="btnPrv" class="btns__btn btn-prev"><img src="./assets/Arrow - left.svg" alt=""></div>
+                  <div id="btnNext" class="btns__btn btn-next"><img src="./assets/Arrow - Right.svg" alt=""></div>
+                </div>
+              </div>
+            </div>
+
+            
+          </section>
         </div>
       </main>
     </div>
-
     <script type="module" src="js/main.js"></script>
   </body>
 </html>

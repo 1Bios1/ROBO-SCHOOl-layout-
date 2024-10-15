@@ -40,3 +40,24 @@ price.addEventListener('click', function(elm) {
     dropdownMenu.classList.remove('opened')
     dropdownBtn.classList.toggle("clicked")
 })
+
+const btnNext = document.getElementById('btnNext')
+const btnPrev = document.getElementById('brnPrv')
+
+const swiper = document.getElementById('swiper')
+
+btnNext.addEventListener('click', function(elm) {
+    swiper.scrollBy({
+        top: 0,
+        left: '250',
+        behavior: 'smooth',
+    })
+})
+
+btnPrv.addEventListener('click', function(elm) {
+    swiper.scrollBy({
+        top: 0,
+        left: '-250',
+        behavior: 'smooth',
+    })
+})
